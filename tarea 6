@@ -1,0 +1,80 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMLvO872MTuE5OkctD0KiST",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/JoshuaUgarte/THC1/blob/tarea-6/tarea%206\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 8,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "HKDMuoilm2Sw",
+        "outputId": "96b03f4f-d3f8-4313-cab9-d7ffc9f07a5d"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Ingresa el primer valor del vector 1: 1\n",
+            "Ingresa el segundo valor del vector 1: 2\n",
+            "Ingresa el tercer valor del vector 1: 3\n",
+            "Ingresa el primer valor del vector 2: 1\n",
+            "Ingresa el segundo valor del vector 2: 2\n",
+            "Ingresa el tercer valor del vector 2: 3\n",
+            "Producto de los vectores: [1, 4, 9]\n",
+            "Potencia del vector 1 (elevado al cubo): [1, 8, 27]\n",
+            "Potencia del vector 2 (elevado al cubo): [1, 8, 27]\n",
+            "Producto escalar: 14\n"
+          ]
+        }
+      ],
+      "source": [
+        "# aqui se pide al usuario que ingrese los valores de cada vector\n",
+        "vector1 = [int(input(\"Ingresa el primer valor del vector 1: \")), int(input(\"Ingresa el segundo valor del vector 1: \")), int(input(\"Ingresa el tercer valor del vector 1: \"))]\n",
+        "vector2 = [int(input(\"Ingresa el primer valor del vector 2: \")), int(input(\"Ingresa el segundo valor del vector 2: \")), int(input(\"Ingresa el tercer valor del vector 2: \"))]\n",
+        "\n",
+        "# el Producto de los vectores se define por\n",
+        "producto_vectorial = [vector1[i] * vector2[i] for i in range(3)]\n",
+        "\n",
+        "# la potencia de cada vector (n=3)\n",
+        "potencia_vector1 = [v**3 for v in vector1]\n",
+        "potencia_vector2 = [v**3 for v in vector2]\n",
+        "\n",
+        "# el producto escalar de los vectores se define por\n",
+        "producto_escalar = sum(vector1[i] * vector2[i] for i in range(3))\n",
+        "\n",
+        "# al final se imprimen los resultados de las operaciones\n",
+        "print(\"Producto de los vectores:\", producto_vectorial)\n",
+        "print(\"Potencia del vector 1 (elevado al cubo):\", potencia_vector1)\n",
+        "print(\"Potencia del vector 2 (elevado al cubo):\", potencia_vector2)\n",
+        "print(\"Producto escalar:\", producto_escalar)\n"
+      ]
+    }
+  ]
+}
