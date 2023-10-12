@@ -1,0 +1,146 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "toc_visible": true,
+      "authorship_tag": "ABX9TyMC/2oNMnAQ81+VAQuNUgQp",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/JoshuaUgarte/THC1/blob/10OCT/10OCT\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "rxcI5Ei4IYLz",
+        "outputId": "1b21fceb-ed3d-45bd-d6f2-33b604327ab3"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Ingresa el número 1: 1\n",
+            "Ingresa el número 2: 2\n",
+            "Ingresa el número 3: 3\n",
+            "Ingresa el número 4: 4\n",
+            "Ingresa el número 5: 5\n",
+            "El promedio de los números es:  3.0\n"
+          ]
+        }
+      ],
+      "source": [
+        "#primero se define la lista de numeros\n",
+        "#despues se introducen los numeros de la lista\n",
+        "#al ultimo se realizan las operaciones necesarias para calcular el promedio\n",
+        "lista_de_numeros = [0, 0, 0, 0, 0]\n",
+        "\n",
+        "for i in range(5):\n",
+        "    lista_de_numeros[i] = float(input(\"Ingresa el número \" + str(i+1) + \": \"))\n",
+        "\n",
+        "promedio = sum(lista_de_numeros) / len(lista_de_numeros)\n",
+        "\n",
+        "print(\"El promedio de la lista de numeros es: \", promedio)\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Solicitar al usuario que introduzca los valores de los números separados por comas\n",
+        "entrada_usuario = input(\"Introduce los valores de los números separados por comas: \")\n",
+        "\n",
+        "# Dividir la entrada del usuario en una lista de números\n",
+        "numeros = [int(numero) for numero in entrada_usuario.split(',')]\n",
+        "\n",
+        "# Encontrar el valor máximo y mínimo\n",
+        "maximo = max(numeros)\n",
+        "minimo = min(numeros)\n",
+        "\n",
+        "print(\"El valor máximo es:\", maximo)\n",
+        "print(\"El valor mínimo es:\", minimo)\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "L-nroOHoJlKT",
+        "outputId": "f8b8c82d-0072-4464-c03a-7bf71d657a31"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Introduce los valores de los números separados por comas: 50,60,70,100,250\n",
+            "El valor máximo es: 250\n",
+            "El valor mínimo es: 50\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#primero se solicita al usuario que introduzca los valores de los numeros en las listas en las que vamos a trabajar\n",
+        "entrada_usuario = input(\"Introduce los valores de la lista de números separados por comas: \")\n",
+        "#despues se introduce la entrada de los numeros en una lista\n",
+        "numeros = [int(numero) for numero in entrada_usuario.split(',')]\n",
+        "#creamos las dos listas de los numeros pares e impares, para despues introducir los valores resultantes de las operaciones que nos dicen si es uno u otro\n",
+        "pares = []\n",
+        "impares = []\n",
+        "#separamos los numeros en pares o impares con la division entre dos con residuo cero o por el contrario numero impar\n",
+        "for num in numeros:\n",
+        "    if num % 2 == 0:\n",
+        "        pares.append(num)\n",
+        "    else:\n",
+        "        impares.append(num)\n",
+        "\n",
+        "print(\"Los números pares son: \", pares)\n",
+        "print(\"Los números impares son: \", impares)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "8kSIgaciJlUV",
+        "outputId": "9ac4f3bb-4813-4c39-d29d-6a5aff8f8414"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Introduce los valores de la lista de números separados por comas: 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15\n",
+            "Los números pares son:  [2, 4, 6, 8, 10, 12, 14]\n",
+            "Los números impares son:  [1, 3, 5, 7, 9, 11, 13, 15]\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
